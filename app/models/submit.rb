@@ -1,5 +1,5 @@
 class Submit < ActiveRecord::Base
-  require "CSV"
+  require 'csv'
   require 'uri'
   require 'resolv'
 

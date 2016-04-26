@@ -1,0 +1,30 @@
+<div class="title">
+  <h1> DG Threatfeed</h1>
+</div>
+<div class="small-8 large-centered columns">
+  <div class="panel">
+    <%= form_for @Submit do |f| %>
+      <div class="field">
+        <%= f.label :imput, "Indicator" %>
+        <%= f.text_field( :imput ) %>
+      </div>
+      <div class="field">
+        <%= f.label :kind, "Indicator Type" %>
+        <%= f.select :kind, [['IP', 'ip'], ['URL', 'url'], ['Domain', 'domain'], ['Email', 'email'], ['Md5', 'md5'], ['Sha256', 'sha256']] %>
+      </div>
+      <div class="field">
+        <%= f.label :description, "Description (required)" %>
+        <%= f.text_area( :description ) %>
+      </div>
+      <div class="actions">
+        <%= f.submit "Submit" %>
+      </div>
+    <% end %>
+
+    <br>
+    <h4> Indicator lists </h4>
+    <% @iocs.each do |type| %>
+      <%= link_to type, submit_path(type) + ".csv" %>
+    <% end %>
+  </div>
+</div>

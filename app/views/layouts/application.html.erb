@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Threatfeed</title>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <nav class="top-bar">
+    <ul class="title-area">
+      <li class="name">
+        <h4>DG Threatfeed</h4>
+      </li>
+    </ul>
+  </nav>
+
+  <%- flash.each do |key, value| -%>
+    <div class="flash flash-<%= key %>">
+      <%= value %>
+    </div>
+  <%- end -%>
+
+  <%= yield %>
+
+  <%= javascript_include_tag 'application' %>
+  <%= yield :extra_footer %>
+</body>
+</html>

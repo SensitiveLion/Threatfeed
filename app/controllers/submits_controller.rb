@@ -17,6 +17,7 @@ class SubmitsController < ApplicationController
         if @imput =~ Resolv::IPv4::Regex or imput =~ Resolv::IPv6::Regex
           Submit.ip(@imput, @description)
           flash[:notice] = "you have added a new IP IoC!"
+          redirect_to '/'
         else
           flash[:notice] = "Indicator failed to be added check if you have the correct indicator type"
           redirect_to '/'
@@ -25,6 +26,7 @@ class SubmitsController < ApplicationController
         if /^[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}$/.match(@imput)
           Submit.domain(@imput, @description)
           flash[:notice] = "you have added a new domain IoC!"
+          redirect_to '/'
         else
           flash[:notice] = "Indicator failed to be added check if you have the correct indicator type"
           redirect_to '/'
@@ -33,6 +35,7 @@ class SubmitsController < ApplicationController
         if /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/.match(@imput)
           Submit.email(@imput, @description)
           flash[:notice] = "you have added a new email IoC!"
+          redirect_to '/'
         else
           flash[:notice] = "Indicator failed to be added check if you have the correct indicator type"
           redirect_to '/'
@@ -41,6 +44,7 @@ class SubmitsController < ApplicationController
         if @imput =~ URI::regexp
           Submit.url(@imput, @description)
           flash[:notice] = "you have added a new URL IoC!"
+          redirect_to '/'
         else
           flash[:notice] = "Indicator failed to be added check if you have the correct indicator type"
           redirect_to '/'
@@ -49,6 +53,7 @@ class SubmitsController < ApplicationController
         if /[0-9a-f]{32}/.match(@imput)
           Submit.md5(@imput, @description)
           flash[:notice] = "you have added a new md5 IoC!"
+          redirect_to '/'
         else
           flash[:notice] = "Indicator failed to be added check if you have the correct indicator type"
           redirect_to '/'
@@ -57,6 +62,7 @@ class SubmitsController < ApplicationController
         if /[0-9a-f]{64}/.match(@imput)
           Submit.sha256(@imput, @description)
           flash[:notice] = "you have added a new sha256 IoC!"
+          redirect_to '/'
         else
           flash[:notice] = "Indicator failed to be added check if you have the correct indicator type"
           redirect_to '/'

@@ -10,41 +10,35 @@ class Submit < ActiveRecord::Base
       CSV.open("public/indicators/ip.csv", "a") do |csv|
         csv << [imput, description]
       end
-    redirect_to '/'
   end
 
   def self.domain(imput, description)
     CSV.open("public/indicators/domain.csv", "a") do |csv|
       csv << [imput, description]
     end
-    redirect_to '/'
   end
 
   def self.email(imput, description)
     CSV.open("public/indicators/email.csv", "a") do |csv|
       csv << [imput, description]
     end
-    redirect_to '/'
   end
 
   def self.url(imput, description)
     CSV.open("public/indicators/url.csv", "a") do |csv|
       csv << [imput, description]
     end
-    redirect_to '/'
   end
 
   def self.md5(imput, description)
     CSV.open("public/indicators/md5.csv", "a") do |csv|
       csv << [imput, description]
     end
-    redirect_to '/'
   end
 
   def self.sha256(imput, description)
     CSV.open("public/indicators/sha256.csv", "a") do |csv|
       csv << [imput, description]
     end
-    redirect_to '/'
   end
 end

@@ -14,7 +14,7 @@ class SubmitsController < ApplicationController
     @ioc = Submit.new(submit_params)
     if @ioc.valid?
       if type == "ip"
-        if @imput =~ Resolv::IPv4::Regex or imput =~ Resolv::IPv6::Regex
+        if @imput =~ Resolv::IPv4::Regex or @imput =~ Resolv::IPv6::Regex
           Submit.ip(@imput, @description)
           flash[:notice] = "you have added a new IP IoC!"
           redirect_to '/'

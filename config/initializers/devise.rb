@@ -150,7 +150,7 @@ Devise.setup do |config|
   # one (and only one) @ exists in the given string. This is mainly
   # to give user feedback and not to assert the e-mail validity.
   # config.email_regexp = /\A[^@]+@[^@]+\z/
-
+  config.secret_key = 'd9e4f8575f2d8a758b1677bca916e8ec7550237806e8ef71c976f78e8f8f0f0e05cfb87caf2ff341ef5e22fed57154cd6f8cb357b1b14aa95d313c7b10077634'
   # ==> Configuration for :timeoutable
   # The time you want to timeout the user session without activity. After this
   # time the user will be asked for credentials again. Default is 30 minutes.

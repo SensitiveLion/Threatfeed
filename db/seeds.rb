@@ -5,7 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-require "CSV"
+require "csv"
 
 CSV.open("public/indicators/email.csv", "wb") do |csv|
   csv << ["Indicator", "Description"]

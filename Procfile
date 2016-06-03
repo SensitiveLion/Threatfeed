@@ -1,1 +1,1 @@
-web: thin start
+web: thin start -e production

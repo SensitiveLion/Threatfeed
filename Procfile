@@ -1,1 +1,1 @@
-web: thin start -e production
+web: thin start --ssl -e production

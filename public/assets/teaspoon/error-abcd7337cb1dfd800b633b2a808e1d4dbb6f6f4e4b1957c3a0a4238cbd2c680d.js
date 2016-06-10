@@ -1,0 +1,1 @@
+(function(){var r=function(r,t){function n(){this.constructor=r}for(var e in t)o.call(t,e)&&(r[e]=t[e]);return n.prototype=t.prototype,r.prototype=new n,r.__super__=t.prototype,r},o={}.hasOwnProperty;Teaspoon.Error=function(o){function t(r){this.name="TeaspoonError",this.message=r||""}return r(t,o),t}(Error)}).call(this);

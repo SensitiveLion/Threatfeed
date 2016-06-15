@@ -1,2 +1,2 @@
 
-web_ssl: thin start --ssl -e production
+web_ssl: thin --ssl -e production

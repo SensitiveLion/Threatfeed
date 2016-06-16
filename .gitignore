@@ -12,5 +12,8 @@
 !/log/.keep
 /tmp
 
+
 /Gemfile.lock
 /ssllocal/*
+
+

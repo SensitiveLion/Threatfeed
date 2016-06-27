@@ -30,6 +30,12 @@ class Submit < ActiveRecord::Base
     end
   end
 
+  def self.file_name(imput, description)
+    CSV.open("public/indicators/file_name.csv", "a") do |csv|
+      csv << [imput, description]
+    end
+  end
+
   def self.md5(imput, description)
     CSV.open("public/indicators/md5.csv", "a") do |csv|
       csv << [imput, description]

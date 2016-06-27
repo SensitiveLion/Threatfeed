@@ -5,12 +5,12 @@
   <div class="panel">
     <%= form_for @Submit do |f| %>
       <div class="field">
-        <%= f.label :imput, "Indicator" %>
-        <%= f.text_field( :imput ) %>
+        <%= f.label :imput, "Indicators (if you add more than one make sure it is newline deliminated)" %>
+        <%= f.text_area( :imput ) %>
       </div>
       <div class="field">
         <%= f.label :kind, "Indicator Type" %>
-        <%= f.select :kind, [['IP', 'ip'], ['URL', 'url'], ['Domain', 'domain'], ['Email', 'email'], ['Md5', 'md5'], ['Sha256', 'sha256']] %>
+        <%= f.select :kind, [['IP', 'ip'], ['URL', 'url'], ['Domain', 'domain'], ['Email', 'email'], ['File Name', 'file name'], ['Md5', 'md5'], ['Sha256', 'sha256']] %>
       </div>
       <div class="field">
         <%= f.label :description, "Description (required)" %>

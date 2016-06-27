@@ -30,3 +30,7 @@ end
 CSV.open("public/indicators/md5.csv", "wb") do |csv|
   csv << ["Indicator", "Description"]
 end
+
+CSV.open("public/indicators/file_name.csv", "wb") do |csv|
+  csv << ["Indicator", "Description"]
+end
